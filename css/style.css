@@ -1,0 +1,133 @@
+/* Root CSS Variables */
+:root {
+    --light-background: #E6F5FD;
+    --dark-background: #000000;
+    --button-color: #298196;
+    --header-color: #42CBEC;
+    --light-paragraph-color: #000000;
+    --dark-paragraph-color: #ffffff;
+    --font-family: 'Khand', sans-serif;
+    --light-button-bg: #F5F0D9;
+    --light-icon-bg: #F5D64E;
+    --light-icon-color: #292929;
+    --dark-button-bg: #D4ECF9;
+    --dark-icon-bg: #42CBEC;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-background);
+    font-family: var(--font-family);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+    margin-top: 150px;
+}
+
+h1 {
+    color: var(--header-color);
+    font-size: 2.5rem;
+    margin: 0px;
+}
+
+p {
+    color: var(--light-paragraph-color);
+    font-size: 1rem;
+    transition: color 0.3s;
+    margin: 0px;
+}
+
+.logo {
+    margin: auto;
+    width: 700px;
+    height: 195px;
+    object-fit: none;
+    background: no-repeat center;
+    background-size: contain;
+
+    /* animation: spin 5s linear infinite; */
+}
+
+/* @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+} */
+
+.button {
+    margin-top: 20px;
+}
+
+.explore-btn {
+    background-color: var(--button-color);
+    color: white;
+    padding: 12px;
+    width: 275px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-family: var(--font-family);
+}
+
+.mode-toggle {
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    background-color: var(--light-button-bg);
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--light-paragraph-color);
+    transition: background-color 0.3s, color 0.3s;
+    width: 40px;
+    justify-content: flex-start;
+    /* Default: Light mode text on left */
+}
+
+.mode-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-icon-bg);
+    color: var(--light-icon-color);
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
+}
+
+.mode-icon.dark-mode {
+    transform: translateX(10px);
+}
+
+body.dark {
+    background-color: var(--dark-background);
+}
+
+body.dark p {
+    color: var(--dark-paragraph-color);
+}
+
+body.dark .mode-toggle {
+    background-color: var(--dark-button-bg);
+    color: var(--light-paragraph-color);
+    justify-content: flex-end;
+    /* Dark Mode: Moves text to the right */
+}
+
+body.dark .mode-icon {
+    background-color: var(--dark-icon-bg);
+}

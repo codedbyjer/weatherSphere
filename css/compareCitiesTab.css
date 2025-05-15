@@ -1,0 +1,293 @@
+:root {
+    --light-background: #E6F5FD;
+    --dark-background: #1D1D1D;
+    --light-paragraph-color: #000000;
+    --dark-paragraph-color: #FFFFFF;
+    --light-button-bg: rgba(255, 255, 255, 0.5);
+    --dark-button-bg: #000000;
+    --light-icon-bg: #F5F0D9;
+    --dark-buttonIcon-bg: #d4ecf9;
+    --light-icon-color: #000000;
+    --dark-icon-bg: #42CBEC;
+    --hover: #297c91;
+    --font-family: 'Khand', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--light-background);
+    color: var(--light-paragraph-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: var(--light-button-bg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    overflow: hidden;
+}
+
+.logo img {
+    display: flex;
+    justify-content: flex-start;
+    object-fit: none;
+    margin-left: 30px;
+    height: 50px;
+    width: 400px;
+    background: no-repeat center;
+    object-fit: contain;  
+
+}
+.top-nav a {
+    text-decoration: none;
+    color: var(--light-paragraph-color);
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.top-nav a.active {
+    color: #42CBEC;
+    font-weight: bold;
+}
+
+.top-nav .search-bar {
+    flex-grow: 1;
+    max-width: 300px;
+    margin-left: 20px;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search-bar i {
+    transition: background-color 0.3s, color 0.3s;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 8px 8px 35px; /* Add padding to the left for the icon */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+}
+
+body.dark .body{
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #1D1D1D;
+
+}
+
+body.dark .search-bar{
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #1D1D1D;
+    border-radius: 10px;
+
+}
+
+body.dark .search-bar input{
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #1D1D1D;
+    border-radius: 10px;
+    color: var(--light-background);
+    
+    
+}
+
+body.dark .search-bar i {
+    color: var(--light-background);
+}
+
+
+.mode-toggle {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    background-color: var(--light-icon-bg);
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--light-paragraph-color);
+    transition: background-color 0.3s, color 0.3s;
+    width: 40px;
+    justify-content: flex-start;
+}
+
+
+.mode-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-icon-bg);
+    color: var(--light-icon-color);
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
+}
+
+.mode-icon.dark-mode {
+    transform: translateX(10px);
+}
+
+body.dark .mode-toggle {
+    background-color: var(--dark-buttonIcon-bg);
+    color: var(--light-paragraph-color);
+    justify-content: flex-end;
+}
+
+body.dark .mode-icon {
+    background-color: var(--dark-icon-bg);
+}
+
+body.dark {
+    background-color: var(--dark-background);
+    color: var(--dark-paragraph-color);
+}
+
+body.dark .top-nav {
+    background-color: var(--dark-button-bg);
+}
+
+body.dark .top-nav a {
+    color: var(--dark-paragraph-color);
+}
+body.dark .top-nav a.active{
+    color: #42CBEC;
+    font-weight: bold;
+}
+
+.content-section {
+    justify-self: center;
+}
+
+.compare-cities {
+    justify-self: center;
+    width: 92vw;
+    margin: 20px;
+    background-color: var(--light-button-bg);
+    gap: 20px;
+    font-family: var(--font-family);
+    padding: 30px;
+    padding-bottom: 200px;
+    border-radius: 15px;
+}
+
+.compare-cities h1 {
+    color: var(--dark-icon-bg);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.compare-cities .search-bar-compareCities {
+    margin-left: 60px;
+    display: flex;
+    gap: 1.5rem;
+    justify-content:first baseline;
+    margin-bottom: 2rem;
+}
+
+.compare-cities .search-bar-compareCities label{
+    padding-right: 10px;
+    font-weight: 600;
+}
+
+.compare-cities .search-bar-compareCities input {
+    width: 20vw;
+    padding: 0.75rem;
+    font-family: var(--font-family);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: var(--light-background);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    
+}
+
+.compare-cities .search-bar-compareCities button {
+    background-color: var(--dark-icon-bg);
+    color: var(--dark-paragraph-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.compare-cities .search-bar-compareCities button:hover {
+    background-color: var(--hover);
+}
+
+.compare-cities table {
+    justify-self: center;
+    width: 85vw;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.compare-cities table th,
+.compare-cities table td {
+    padding: 1rem;
+    border: 1px solid var(--header-color);
+    font-size: 1rem;
+    color: var(--light-paragraph-color);
+}
+
+.compare-cities table th {
+    background-color: var(--dark-icon-bg);
+    color: var(--dark-paragraph-color);
+    font-weight: bold;
+}
+
+.compare-cities table tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.compare-cities table tr:hover {
+    background-color: var(--light-background);
+}
+
+body.dark .compare-cities{
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--dark-button-bg);
+}
+
+body.dark .compare-cities .search-bar-compareCities input {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--dark-background);
+}
+
+body.dark .compare-cities table td{
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--dark-background);
+    color: var(--light-background);
+   
+}

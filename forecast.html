@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere - Forecast</title>
+    <script src="script/script.js" defer></script>
+    <script src="script/modeToggle.js" defer></script>
+    <link rel="preload" href="images/transparent_crop.png" as="image">
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/forecast.css">
+</head>
+
+<body>
+    <div class="top-nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/transparent_mainUiLogo.png" alt="logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="forecast.html" class="active">Forecast</a>
+            <a href="compareCities.html">Compare Cities</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="search-bar">
+            <i id="searchIcon" class="bx bx-search"></i>
+            <input type="text" id="cityInput" placeholder="Search City">
+        </div>
+        <div class="mode-toggle" id="modeToggle">
+            <div class="mode-icon" id="modeIcon">☀️</div>
+        </div>
+    </div>
+
+    <div class="forecastTab" id="forecastTab">
+        <div class="left-side">
+            <div class="current-weather-card">
+                <div class="lottie-container">
+                    <video id="weatherAnimation" autoplay loop muted playsinline>
+                        <source src="animations/Animation - 1738893765585.webm" type="video/webm">
+                    </video>
+                </div>
+                <div id="temperature" class="temperature">--°C</div>
+                <div id="dayTime">Loading...</div><br>
+                <div id="weatherCondition">--</div>
+                <div id="rainChance">Rain - --%</div><br>
+                <div id="currentCity" class="currentCity">--</div>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="section">
+                <p>Today's Forecast</p>
+                <div class="forecast-table" id="todayForecast"></div>
+            </div>
+            <div class="section">
+                <p>Air Conditions</p>
+                <div class="air-conditions">
+                    <div class="condition"><p>Real Feel</p><p id="realFeel" class="weather-value">--°C</p></div>
+                    <div class="condition"><p>Humidity</p><p id="humidity" class="weather-value">--%</p></div>
+                    <div class="condition"><p>Wind Speed</p><p id="windSpeed" class="weather-value">-- km/h</p></div>
+                    <div class="condition"><p>UV Index</p><p id="uvIndex" class="weather-value">--</p></div>
+                </div>
+            </div>
+            <div class="section">
+                <p>7-Day Forecast</p>
+                <div class="forecast-table" id="weekForecast"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

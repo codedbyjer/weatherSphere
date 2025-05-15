@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/modeToggle.js"></script>
+    <link rel="preload" href="images/transparent_crop.png" as="image">
+    <script src="script/contactFormHandler.js"></script>
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>WeatherSphere - Contact</title>
+
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <div class="top-nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/transparent_mainUiLogo.png" alt="logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="forecast.html">Forecast</a>
+            <a href="compareCities.html">Compare Cities</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+        <div class="search-bar">
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search City">
+        </div>
+        <div class="mode-toggle" id="modeToggle">
+            <div class="mode-icon" id="modeIcon">☀️</div>
+        </div>
+    </div>
+
+
+    <div class="contact-tab">
+        <!-- Left Side: Contact Information -->
+        <div class="contact-info">
+
+            <div class="details">
+                <h1>Contact Us</h1>
+                <p>Have questions or need assistance? Get in touch with WeatherSphere to learn more about our real-time
+                    weather services.</p>
+                <p>📧 Email: <a href="mailto:support@weathersphere.com">support@weathersphere.com</a></p>
+                <p>📞 Phone: <a href="tel:+1234567890">+1-234-567-890</a></p>
+
+            </div>
+
+            <div class="details">
+                <h3>Customer Support</h3>
+                <p>Our support team is available around the clock to help with any questions or concerns regarding
+                    WeatherSphere’s services.</p>
+            </div>
+
+            <div class="details">
+                <h3>Feedback and Suggestions</h3>
+                <p>User feedback is essential in improving WeatherSphere. Share your thoughts and suggestions to help us
+                    enhance our platform.</p>
+            </div>
+
+            <div class="details">
+                <h3>Media Inquiries</h3>
+                <p>For press or media-related questions, please reach out to <a
+                        href="mailto:media@weathersphere.com">media@weathersphere.com</a>.</p>
+            </div>
+        </div>
+
+        <!-- Right Side: Contact Form -->
+        <div class="contact-form" id="contactForm">
+            <h2>Get in Touch</h2>
+            <p class="getInTouch">You can reach us anytime</p>
+            <form>
+                <div class="form-group">
+                    <i class='bx bx-user'></i>
+                    <input type="text" id="userName" placeholder="First Name" required>
+                    <input type="text" id="userLastName" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <i class='bx bx-envelope'></i>
+                    <input type="email" id="userEmail" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <i class='bx bx-message-square-detail'></i>
+                    <textarea id="userMessage" placeholder="How can we help?" required></textarea>
+                </div>
+                <button type="submit" id="submitBtn" class="submit-btn">Submit</button>
+            </form>
+            <p class="terms">By contacting us, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy
+                    Policy</a>.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 WeatherSphere(GROUP 3). All rights reserved.</p>
+        <div class="social-icons">
+            <i class='bx bxl-facebook'></i>
+            <i class='bx bxl-instagram'></i>
+            <i class='bx bxl-telegram'></i>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

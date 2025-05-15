@@ -1,0 +1,312 @@
+:root {
+    --light-background: #E6F5FD;
+    --dark-background: #1D1D1D;
+    --light-paragraph-color: #000000;
+    --dark-paragraph-color: #FFFFFF;
+    --light-button-bg: rgba(255, 255, 255, 0.5);
+    --dark-button-bg: #000000;
+    --light-icon-bg: #F5F0D9;
+    --dark-buttonIcon-bg: #d4ecf9;
+    --light-icon-color: #000000;
+    --dark-icon-bg: #42CBEC;
+    --hover: #297c91;
+    --font-family: 'Khand', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--light-background);
+    color: var(--light-paragraph-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: var(--light-button-bg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    overflow: hidden;
+}
+
+.logo img {
+    display: flex;
+    justify-content: flex-start;
+    object-fit: none;
+    margin-left: 30px;
+    height: 50px;
+    width: 400px;
+    background: no-repeat center;
+    object-fit: contain;  
+
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: var(--light-paragraph-color);
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.top-nav a.active {
+    color: #42CBEC;
+    font-weight: bold;
+}
+
+.top-nav .search-bar {
+    flex-grow: 1;
+    max-width: 300px;
+    margin-left: 20px;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search-bar i {
+    transition: background-color 0.3s, color 0.3s;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 8px 8px 35px; /* Add padding to the left for the icon */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+}
+
+body.dark .body{
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #1D1D1D;
+
+}
+
+body.dark .search-bar{
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #1D1D1D;
+    border-radius: 10px;
+
+}
+
+body.dark .search-bar input{
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #1D1D1D;
+    border-radius: 10px;
+    color: var(--light-background);
+    
+}
+
+body.dark .search-bar i {
+    color: var(--light-background);
+}
+
+
+.mode-toggle {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    background-color: var(--light-icon-bg);
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--light-paragraph-color);
+    transition: background-color 0.3s, color 0.3s;
+    width: 40px;
+    justify-content: flex-start;
+}
+
+
+.mode-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-icon-bg);
+    color: var(--light-icon-color);
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
+}
+
+.mode-icon.dark-mode {
+    transform: translateX(10px);
+}
+
+body.dark .mode-toggle {
+    background-color: var(--dark-buttonIcon-bg);
+    color: var(--light-paragraph-color);
+    justify-content: flex-end;
+}
+
+body.dark .mode-icon {
+    background-color: var(--dark-icon-bg);
+}
+
+body.dark {
+    background-color: var(--dark-background);
+    color: var(--dark-paragraph-color);
+}
+
+body.dark .top-nav {
+    background-color: var(--dark-button-bg);
+}
+
+body.dark .top-nav a {
+    color: var(--dark-paragraph-color);
+}
+body.dark .top-nav a.active{
+    color: #42CBEC;
+    font-weight: bold;
+}
+
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--light-background);
+    color: var(--light-paragraph-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-tab {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 30vw;
+    padding-left: 130px;
+    
+}
+
+.contact-info h1 {
+    color: var(--dark-icon-bg);
+}
+
+.contact-info h3, .contact-info p{
+    font-size: 1rem;
+    margin: 0px;
+}
+
+.contact-info a {
+    color: var(--hover);
+    text-decoration: none;
+}
+.contact-info .details {
+    padding: 5px;
+}
+
+.contact-form {
+    background: var(--light-button-bg);
+    margin-right: 150px;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.contact-form h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0px;
+
+}
+.contact-form .getInTouch{
+    margin: 0px;
+    padding-bottom: 15px;
+
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+.form-group i {
+    font-size: 1rem;
+    color: var(--dark-icon-bg);
+}
+
+.form-group input, .form-group textarea {
+    flex: 1;
+    font-family: var(--font-family);
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--dark-icon-bg);
+    color: var(--dark-paragraph-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-family: var(--font-family);
+}
+
+.submit-btn:hover {
+    background-color: var(--hover);
+}
+
+.terms {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.social-icons i {
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+body.dark .contact-form {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--dark-button-bg);
+}
+
+
+body.dark .contact-form .form-group input, body.dark .contact-form .form-group textarea{
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--dark-background);
+    color: var(--light-background);
+}
+
+body.dark footer{
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--dark-background);
+}

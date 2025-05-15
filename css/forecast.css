@@ -1,0 +1,288 @@
+:root {
+    --light-background: #E6F5FD;
+    --dark-background: #1D1D1D;
+    --light-paragraph-color: #000000;
+    --dark-paragraph-color: #FFFFFF;
+    --light-button-bg: rgba(255, 255, 255, 0.5);
+    --dark-button-bg: #000000;
+    --light-icon-bg: #F5F0D9;
+    --dark-buttonIcon-bg: #d4ecf9;
+    --light-icon-color: #000000;
+    --dark-icon-bg: #42CBEC;
+    --font-family: 'Khand', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--light-background);
+    color: var(--light-paragraph-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: var(--light-button-bg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    overflow: hidden;
+}
+
+.logo img {
+    display: flex;
+    justify-content: flex-start;
+    object-fit: none;
+    margin-left: 30px;
+    height: 50px;
+    width: 400px;
+    background: no-repeat center;
+    object-fit: contain;  
+
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: var(--light-paragraph-color);
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.top-nav a.active {
+    color: #42CBEC;
+    font-weight: bold;
+}
+
+.top-nav .search-bar {
+    flex-grow: 1;
+    max-width: 300px;
+    margin-left: 20px;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search-bar i {
+    transition: background-color 0.3s, color 0.3s;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 8px 8px 35px; /* Add padding to the left for the icon */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+}
+
+body.dark .body{
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #1D1D1D;
+
+}
+
+body.dark .search-bar{
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #1D1D1D;
+    border-radius: 10px;
+
+}
+
+body.dark .search-bar input{
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #1D1D1D;
+    border-radius: 10px;
+    color: var(--light-background);
+    
+}
+
+body.dark .search-bar i {
+    color: var(--light-background);
+}
+
+
+.mode-toggle {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    background-color: var(--light-icon-bg);
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--light-paragraph-color);
+    transition: background-color 0.3s, color 0.3s;
+    width: 40px;
+    justify-content: flex-start;
+}
+
+
+.mode-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-icon-bg);
+    color: var(--light-icon-color);
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
+}
+
+.mode-icon.dark-mode {
+    transform: translateX(10px);
+}
+
+body.dark .mode-toggle {
+    background-color: var(--dark-buttonIcon-bg);
+    color: var(--light-paragraph-color);
+    justify-content: flex-end;
+}
+
+body.dark .mode-icon {
+    background-color: var(--dark-icon-bg);
+}
+
+body.dark {
+    background-color: var(--dark-background);
+    color: var(--dark-paragraph-color);
+}
+
+body.dark .top-nav {
+    background-color: var(--dark-button-bg);
+}
+
+body.dark .top-nav a {
+    color: var(--dark-paragraph-color);
+}
+body.dark .top-nav a.active{
+    color: #42CBEC;
+    font-weight: bold;
+}
+
+/* Layout */
+.forecastTab {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.9rem;
+    gap: 20px;
+    padding: 20px;
+    align-items: stretch; /* Ensures both sides match in height */
+}
+
+.left-side {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.right-side {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+/* Current Weather Card */
+.current-weather-card {
+    background-color: var(--light-button-bg);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    transition: background-color 0.3s;
+    padding: 30px;
+    height: 502px;
+    
+}
+
+.lottie-container {
+    display: flex;
+    justify-self: center;
+    width: 200px;
+    height: 200px;
+}
+
+body.dark .current-weather-card {
+    background-color: var(--dark-button-bg);
+}
+
+.current-weather-card .temperature {
+    color: #D9A203;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.current-weather-card .currentCity {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+/* Sections */
+.section {
+    background-color: var(--light-button-bg);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 5px;
+    padding-left: 20px;
+    transition: background-color 0.3s;
+}
+
+
+body.dark .section {
+    background-color: var(--dark-button-bg);
+}
+
+.air-conditions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.condition {
+    font-size: 0.9rem;
+}
+
+.forecast-table {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.forecast-column {
+    flex: 1;
+}
+
+.forecast-column:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.forecast-column img {
+    width: 30px;
+}
+
+.weather-value {
+    padding-bottom: 24px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+body.dark .forecast-column:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
